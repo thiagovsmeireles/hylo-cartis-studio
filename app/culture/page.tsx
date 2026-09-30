@@ -10,7 +10,7 @@ export default function Culture() {
     <div className="pt-24 px-4 md:px-8 pb-20 bg-ink min-h-screen">
       <p className="font-mono text-[10px] tracking-[0.3em] text-ash">CULTURE — FASHION · MUSIC · STREET</p>
       <h1 className="font-display text-6xl md:text-9xl tracking-mega">CUL<br />TURE</h1>
-      <p className="text-bone/60 max-w-xl mt-4">A Hylo já se conecta com artistas da música — do DF para o Brasil. Abaixo, somente nomes com comprovação pública em cobertura jornalística. Fotos de acervo licenciado entram aqui.</p>
+      <p className="text-bone/60 max-w-xl mt-4">A Hylo já se conecta com artistas da música — do DF para o Brasil. Abaixo, somente nomes com comprovação pública em cobertura jornalística. Fotos reais onde indicado; demais imagens ilustrativas até liberação do acervo.</p>
       <div className="grid md:grid-cols-3 gap-4 mt-10">
         {ARTISTS.map(a => (
           <article key={a.name} className="border border-white/10">

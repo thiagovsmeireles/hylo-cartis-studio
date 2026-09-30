@@ -24,7 +24,7 @@ export default function Footer() {
           <p className="font-mono text-[10px] tracking-[0.2em] text-ash mb-3">CONNECT</p>
           <a className="block py-1 text-sm hover:text-acid" href="https://www.instagram.com/hylocartistudio/" target="_blank" rel="noreferrer">Instagram →</a>
           <a className="block py-1 text-sm hover:text-acid" href="https://www.hylocartis.com.br/" target="_blank" rel="noreferrer">Loja oficial →</a>
-          <p className="font-mono text-[10px] text-ash mt-4 leading-relaxed">Copy editorial nova criada para este conceito. Fatos com fonte pública citada. Fotos de produto: acervo Hylo Cartis Studio (uso autorizado). Imagens editoriais: ilustrativas — substituir por acervo licenciado Hylo.</p>
+          <p className="font-mono text-[10px] text-ash mt-4 leading-relaxed">Copy editorial nova criada para este conceito. Fatos com fonte pública citada. Fotos de produto e editoriais reais: acervo Hylo / divulgação (uso autorizado, créditos nas imagens). Demais imagens ilustrativas.</p>
         </div>
       </div>
       <div className="border-t border-white/10 px-4 md:px-8 py-4 flex flex-wrap gap-3 justify-between font-mono text-[10px] tracking-widest text-ash">
