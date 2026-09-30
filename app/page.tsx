@@ -5,8 +5,22 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
 import { ArrowRight, ArrowUpRight, Play } from 'lucide-react';
 import { COLLECTIONS, PRODUCTS, ARTISTS, RUNWAY, EDITORIALS, OVNI_DROPS } from '@/lib/data';
-import { Reveal, MaskText, Marquee } from '@/components/ui';
+import { Reveal, Marquee } from '@/components/ui';
 import ProductCard from '@/components/ProductCard';
+
+const BP = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
+// Manifesto sem máscaras de recorte: linhas inteiras com fade+slide.
+// (A versão anterior com máscara palavra-por-palavra clipava o texto em alguns mobiles.)
+function MLine({ children, className = '', delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
+  return (
+    <motion.span className={`block ${className}`} initial={{ y: 48, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] }}>
+      {children}
+    </motion.span>
+  );
+}
 
 function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -25,10 +39,10 @@ function Hero() {
         mx.set((e.clientX - r.left) / r.width - 0.5); my.set((e.clientY - r.top) / r.height - 0.5); }}
       className="relative h-[100svh] overflow-hidden bg-black grain">
       <motion.div style={{ x: imgX, y: imgY, scale, clipPath: clip }} className="absolute inset-0">
-        <Image src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=2000&auto=format&fit=crop"
-          alt="Modelo vestindo Hylo Cartis em ambiente urbano de concreto à noite, flash direto" fill priority
-          className="object-cover opacity-80" sizes="100vw" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/60" />
+        <Image src={`${BP}/hylo/brasilia-congresso-noite.jpg`}
+          alt="Congresso Nacional iluminado à noite, Brasília" fill priority
+          className="object-cover opacity-90" sizes="100vw" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/60" />
         {/* RGB split sutil */}
         <motion.div style={{ x: useTransform(sx, v => v * -10) }} className="absolute inset-0 mix-blend-screen opacity-20 bg-[radial-gradient(circle_at_70%_30%,#2B3BFF55,transparent_60%)]" />
       </motion.div>
@@ -48,6 +62,7 @@ function Hero() {
           </Link>
         </div>
         <p className="font-mono text-[10px] tracking-widest text-bone/50 mt-5">PARANOÁ → BRASÍLIA → CULTURA → MODA → MÚSICA → PASSARELA → MUNDO</p>
+        <p className="font-mono text-[9px] tracking-widest text-bone/30 mt-1">FUNDO: CONGRESSO NACIONAL À NOITE — FOTO: WIKIMEDIA COMMONS (CC)</p>
       </motion.div>
     </section>
   );
@@ -63,11 +78,11 @@ export default function Home() {
       <section className="bg-ink px-4 md:px-8 py-24 md:py-40" aria-label="Manifesto">
         <Reveal><p className="font-mono text-[10px] tracking-[0.3em] text-ash">MANIFESTO — COPY EDITORIAL NOVA, NÃO OFICIAL</p></Reveal>
         <h2 className="font-display tracking-mega leading-[0.92] text-[13vw] md:text-[7.5vw] mt-6">
-          <MaskText text="NÓS NÃO" className="block text-bone" />
-          <MaskText text="SEGUIMOS" className="block text-stroke" />
-          <MaskText text="A RUA." className="block text-bone" />
-          <MaskText text="NÓS CRIAMOS" className="block text-bone" />
-          <MaskText text="A NOSSA." className="block text-blood" />
+          <MLine className="text-bone">NÓS NÃO</MLine>
+          <MLine className="text-stroke" delay={0.08}>SEGUIMOS</MLine>
+          <MLine className="text-bone" delay={0.16}>A RUA.</MLine>
+          <MLine className="text-bone" delay={0.24}>NÓS CRIAMOS</MLine>
+          <MLine className="text-blood" delay={0.32}>A NOSSA.</MLine>
         </h2>
         <Reveal delay={0.1}><p className="max-w-xl text-bone/70 mt-8 leading-relaxed">Uma label nascida da rua que ocupa a passarela. Streetwear, hip-hop, moda autoral e construção artesanal — do quarto-ateliê no Paranoá ao Teatro Nacional.</p></Reveal>
       </section>
@@ -205,7 +220,7 @@ export default function Home() {
         </div>
         {['DESIGN', 'CUTTING', 'DETAILS'].map((t, i) => (
           <Reveal key={t} delay={i * 0.07} className="relative aspect-[3/4] overflow-hidden bg-concrete">
-            <Image src={['https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1000&auto=format&fit=crop', 'https://images.unsplash.com/photo-1590736969955-71cc94901144?q=80&w=1000&auto=format&fit=crop', 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1000&auto=format&fit=crop'][i]} alt={`Processo de ateliê — ${t.toLowerCase()}`} fill loading="lazy" sizes="30vw" className="object-cover opacity-80" />
+            <Image src={['https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1000&auto=format&fit=crop', `${BP}/hylo/atelier-tailoring.jpg`, 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1000&auto=format&fit=crop'][i]} alt={`Processo de ateliê — ${t.toLowerCase()}${t === 'CUTTING' ? ' (foto: Wikimedia Commons, CC)' : ''}`} fill loading="lazy" sizes="30vw" className="object-cover opacity-80" />
             <span className="absolute bottom-4 left-4 font-display text-2xl bg-ink/70 px-3 py-1">{t}</span>
           </Reveal>
         ))}

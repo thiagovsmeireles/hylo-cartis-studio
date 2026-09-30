@@ -5,7 +5,7 @@ import Image from 'next/image';
 export const metadata: Metadata = { title: 'Studio', description: 'Inside the Hylo Studio — processo autoral: design, corte, costura, textura, handmade.' };
 const STEPS = [
   { t: 'DESIGN', d: 'Referências fotografadas na rua viram moodboard. Grafite original de Alisson vira estampa.', img: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1000&auto=format&fit=crop' },
-  { t: 'CUTTING', d: 'Modelagem e corte no ateliê — do quarto no Paranoá ao estúdio no Itapoã.', img: 'https://images.unsplash.com/photo-1590736969955-71cc94901144?q=80&w=1000&auto=format&fit=crop' },
+  { t: 'CUTTING', d: 'Modelagem e corte no ateliê — do quarto no Paranoá ao estúdio no Itapoã. Foto: Wikimedia Commons (CC).', img: (process.env.NEXT_PUBLIC_BASE_PATH ?? '') + '/hylo/atelier-tailoring.jpg' },
   { t: 'SEWING', d: 'Costura com a equipe: Marcos Vinnicius, Arthur Ruan e Matheus Cordeiro.', img: 'https://images.unsplash.com/photo-1584992236310-6edddc08acff?q=80&w=1000&auto=format&fit=crop' },
   { t: 'DETAILS', d: 'Etiqueta, metal, desgaste, tapeçaria. Materialidade antes do marketing.', img: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1000&auto=format&fit=crop' },
 ];
