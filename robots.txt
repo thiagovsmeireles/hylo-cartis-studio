@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://thiagovsmeireles.github.io/hylo-cartis-studio/sitemap.xml
