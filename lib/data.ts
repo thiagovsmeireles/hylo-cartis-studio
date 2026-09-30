@@ -86,7 +86,7 @@ export const COLLECTIONS: Collection[] = [
     concept:
       'Nova fase: reformulação criativa e de acessibilidade. O primeiro lançamento simboliza a chegada do OVNI à Terra — voltar a pisar no chão, reconhecer limitações, afetos e realidade. Da bagagem da viagem nascem três drops até dezembro de 2026: ORION (transformação), LYRA (resistência), HYDRA (regeneração). Teto vestiu a OVNI em Brasília e Recife (SET 2026). Editorial produzido em Paris.',
     palette: { bg: '#080810', fg: '#EDEAE3', accent: '#8B7CFF' },
-    image: 'https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=1600&auto=format&fit=crop',
+    image: '/hylo/ed-ovni-71.jpg',
     themes: ['ovni', 'transformação', 'resistência', 'regeneração'],
     facts: ['Drops: ORION · LYRA · HYDRA (até DEZ 2026)', 'Teto veste Hylo: Brasília + Recife, SET 2026', 'Collab no look: colete xadrez com Cepyh'],
     products: ['ovni-regata-respeito', 'ovni-longsleeve', 'ovni-regata-br-homies', 'ovni-regata-br-femmes'],
@@ -262,12 +262,12 @@ export const PRODUCTS: Product[] = [
   },
 ];
 
-export const ARTISTS = [
-  { name: 'TETO', proof: 'Vestiu OVNI Season em Brasília e Recife · SET 2026 (Metrópoles)', image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1000&auto=format&fit=crop', tag: 'OVNI ON STAGE' },
-  { name: 'EMIVI', proof: 'Performance ao vivo no desfile Super Fashion · 06 ABR 2026 (Metrópoles)', image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1000&auto=format&fit=crop', tag: 'RUNWAY PERFORMANCE' },
-  { name: 'VEIGH', proof: 'Registrado com peças Hylo (Metrópoles Catwalk, ABR 2026)', image: 'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=1000&auto=format&fit=crop', tag: 'CULTURE' },
-  { name: 'WIU', proof: 'Registrado com peças Hylo (Metrópoles Catwalk, ABR 2026)', image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1000&auto=format&fit=crop', tag: 'CULTURE' },
-  { name: 'RYU, THE RUNNER', proof: 'Registrado com peças Hylo (Metrópoles Catwalk, ABR 2026)', image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1000&auto=format&fit=crop', tag: 'CULTURE' },
+export const ARTISTS: { name: string; proof: string; image: string; tag: string; credit: string }[] = [
+  { name: 'TETO', proof: 'Vestiu OVNI Season em Brasília e Recife · SET 2026 (Metrópoles)', image: '/hylo/ed-teto-stage.jpg', tag: 'OVNI ON STAGE', credit: 'Foto: @gabrielbrasilphotos / Divulgação — uso autorizado' },
+  { name: 'EMIVI', proof: 'Performance ao vivo no desfile Super Fashion · 06 ABR 2026 (Metrópoles)', image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1000&auto=format&fit=crop', tag: 'RUNWAY PERFORMANCE', credit: 'Foto ilustrativa' },
+  { name: 'VEIGH', proof: 'Registrado com peças Hylo (Metrópoles Catwalk, ABR 2026)', image: 'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=1000&auto=format&fit=crop', tag: 'CULTURE', credit: 'Foto ilustrativa' },
+  { name: 'WIU', proof: 'Registrado com peças Hylo (Metrópoles Catwalk, ABR 2026)', image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1000&auto=format&fit=crop', tag: 'CULTURE', credit: 'Foto ilustrativa' },
+  { name: 'RYU, THE RUNNER', proof: 'Registrado com peças Hylo (Metrópoles Catwalk, ABR 2026)', image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1000&auto=format&fit=crop', tag: 'CULTURE', credit: 'Foto ilustrativa' },
 ];
 
 export const RUNWAY = [
@@ -275,13 +275,13 @@ export const RUNWAY = [
   { year: '2026', title: 'RETURN TO THE RUNWAY — SUPER FASHION NEGRO BRASILEIRO', place: 'Teatro Nacional · 06 ABR 2026', desc: 'Desfile-performance com Emivi ao vivo. Patchwork, cós duplo, tapeçaria. Um dos destaques da 2ª edição.', image: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1400&auto=format&fit=crop' },
 ];
 
-export const EDITORIALS = [
-  { slug: 'teto-veste-ovni-brasilia-recife', cat: 'MUSIC', title: 'Teto veste OVNI em Brasília e Recife', excerpt: 'Colete xadrez com Cepyh, bermuda e longsleeve: a OVNI Season sobe ao palco.', date: '27 SET 2026 · Metrópoles', image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1200&auto=format&fit=crop' },
-  { slug: 'super-fashion-negro-brasileiro-desfile', cat: 'RUNWAY', title: 'Super Fashion Negro Brasileiro: o desfile-performance', excerpt: 'Emivi incendeia a passarela do Teatro Nacional. Moda + música + performance.', date: '06–09 ABR 2026 · Metrópoles', image: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1200&auto=format&fit=crop' },
-  { slug: 'donegan-brasilia-centro', cat: 'FASHION', title: 'Donegan coloca Brasília no centro', excerpt: 'Laranja, calmaria e ateliê: a coleção que inverte o eixo Rio–SP.', date: 'ABR 2025 · Vish Mídia', image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop' },
-  { slug: 'tj-season-primeira-colecao', cat: 'STUDIO', title: 'TJ Season: a primeira coleção', excerpt: 'O cachorro reativo, a Scratch Hip-Hop Shop e a Hylo entrando no mapa.', date: 'NOV 2023 · Metrópoles', image: 'https://images.unsplash.com/photo-1523398002811-999ca8dec234?q=80&w=1200&auto=format&fit=crop' },
-  { slug: 'alisson-cor-sentimento-identidade', cat: 'PEOPLE', title: 'Alisson: cor, sentimento e identidade', excerpt: 'Talk no Catwalk 2025 — a moda que nasce de dentro, do Paranoá para o mundo.', date: '06 NOV 2025 · Metrópoles', image: 'https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?q=80&w=1200&auto=format&fit=crop' },
-  { slug: 'hylo-em-paris-editorial', cat: 'CULTURE', title: 'Hylo em Paris: editorial além-fronteiras', excerpt: 'A nova fase ultrapassa o Brasil com editorial produzido em Paris.', date: 'SET 2026 · Metrópoles', image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop' },
+export const EDITORIALS: { slug: string; cat: string; title: string; excerpt: string; date: string; image: string; credit: string }[] = [
+  { slug: 'teto-veste-ovni-brasilia-recife', cat: 'MUSIC', title: 'Teto veste OVNI em Brasília e Recife', excerpt: 'Colete xadrez com Cepyh, bermuda e longsleeve: a OVNI Season sobe ao palco.', date: '27 SET 2026 · Metrópoles', image: '/hylo/ed-teto-stage.jpg', credit: 'Foto: @gabrielbrasilphotos / Divulgação — uso autorizado' },
+  { slug: 'super-fashion-negro-brasileiro-desfile', cat: 'RUNWAY', title: 'Super Fashion Negro Brasileiro: o desfile-performance', excerpt: 'Emivi incendeia a passarela do Teatro Nacional. Moda + música + performance.', date: '06–09 ABR 2026 · Metrópoles', image: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1200&auto=format&fit=crop', credit: 'Foto ilustrativa' },
+  { slug: 'donegan-brasilia-centro', cat: 'FASHION', title: 'Donegan coloca Brasília no centro', excerpt: 'Laranja, calmaria e ateliê: a coleção que inverte o eixo Rio–SP.', date: 'ABR 2025 · Vish Mídia', image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop', credit: 'Foto ilustrativa' },
+  { slug: 'tj-season-primeira-colecao', cat: 'STUDIO', title: 'TJ Season: a primeira coleção', excerpt: 'O cachorro reativo, a Scratch Hip-Hop Shop e a Hylo entrando no mapa.', date: 'NOV 2023 · Metrópoles', image: 'https://images.unsplash.com/photo-1523398002811-999ca8dec234?q=80&w=1200&auto=format&fit=crop', credit: 'Foto ilustrativa' },
+  { slug: 'alisson-cor-sentimento-identidade', cat: 'PEOPLE', title: 'Alisson: cor, sentimento e identidade', excerpt: 'Talk no Catwalk 2025 — a moda que nasce de dentro, do Paranoá para o mundo.', date: '06 NOV 2025 · Metrópoles', image: 'https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?q=80&w=1000&auto=format&fit=crop', credit: 'Foto ilustrativa' },
+ { slug: 'hylo-em-paris-editorial', cat: 'CULTURE', title: 'Hylo em Paris: editorial além-fronteiras', excerpt: 'A nova fase ultrapassa o Brasil com editorial produzido em Paris.', date: 'SET 2026 · Metrópoles', image: '/hylo/ed-paris-nave.jpg', credit: 'Foto: @rak.___ / Hylo Cartis / Divulgação — uso autorizado' },
 ];
 
 export const money = (v: number) =>

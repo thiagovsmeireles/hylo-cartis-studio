@@ -135,8 +135,8 @@ export default function Home() {
             <Link href="/collections/ovni" className="inline-flex items-center gap-2 mt-7 bg-bone text-ink font-mono text-xs tracking-widest px-6 py-4 hover:bg-acid">ENTER OVNI UNIVERSE <ArrowRight size={14} /></Link>
           </div>
           <Reveal className="relative aspect-[4/5] overflow-hidden grain">
-            <Image src="https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=1400&auto=format&fit=crop" alt="Cidade à noite vista de cima — estranheza e movimento da OVNI Season" fill loading="lazy" className="object-cover" sizes="50vw" />
-            <span className="absolute bottom-4 left-4 font-mono text-[10px] tracking-widest bg-ink/70 px-3 py-2">ORION · LYRA · HYDRA — ATÉ DEZ 2026</span>
+            <Image src="/hylo/ed-paris-khjb.jpg" alt="Editorial OVNI Season em Paris — modelo com a nave no céu" fill loading="lazy" className="object-cover" sizes="50vw" />
+            <span className="absolute bottom-4 left-4 font-mono text-[10px] tracking-widest bg-ink/70 px-3 py-2">A CHEGADA — PARIS · @rak.___ / DIVULGAÇÃO</span>
           </Reveal>
         </div>
       </section>
@@ -168,6 +168,7 @@ export default function Home() {
               <div className="absolute bottom-0 p-5">
                 <h3 className="font-display text-3xl">{a.name}</h3>
                 <p className="font-mono text-[10px] text-bone/70 mt-1 leading-relaxed">{a.proof}</p>
+                <p className="font-mono text-[9px] text-bone/40 mt-1">© {a.credit}</p>
               </div>
             </article>
           ))}

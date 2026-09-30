@@ -16,7 +16,7 @@ export default function Culture() {
           <article key={a.name} className="border border-white/10">
             <div className="relative aspect-[3/4] overflow-hidden"><Image src={a.image} alt={a.name} fill loading="lazy" sizes="33vw" className="object-cover" /></div>
             <div className="p-4"><span className="font-mono text-[9px] tracking-widest bg-blood text-white px-2 py-1">{a.tag}</span>
-            <h2 className="font-display text-2xl mt-2">{a.name}</h2><p className="font-mono text-[10px] text-bone/60 mt-1">{a.proof}</p></div>
+            <h2 className="font-display text-2xl mt-2">{a.name}</h2><p className="font-mono text-[10px] text-bone/60 mt-1">{a.proof}</p><p className="font-mono text-[9px] text-bone/40 mt-1">© {a.credit}</p></div>
           </article>
         ))}
       </div>

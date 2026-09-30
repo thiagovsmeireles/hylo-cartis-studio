@@ -48,6 +48,18 @@ export default function CollectionPage({ params }: { params: { slug: string } })
           <p className="font-mono text-[10px] tracking-widest opacity-50 mt-4">LOOKS · MAKING OF · DESFILE — material de arquivo entra aqui com acervo licenciado.</p>
         </div>
       </div>
+      {c.slug === 'ovni' && (
+        <div className="px-4 md:px-8 pb-12 grid md:grid-cols-2 gap-3">
+          <figure className="relative aspect-[4/3] overflow-hidden">
+            <Image src="/hylo/ed-teto-prod.jpg" alt="Primeiro drop da OVNI Season — peças flutuando" fill loading="lazy" sizes="50vw" className="object-cover" />
+            <figcaption className="absolute bottom-3 left-3 font-mono text-[10px] tracking-widest bg-black/70 px-3 py-1.5">PRIMEIRO DROP — DIVULGAÇÃO · USO AUTORIZADO</figcaption>
+          </figure>
+          <figure className="relative aspect-[4/3] overflow-hidden">
+            <Image src="/hylo/ed-ovni-50.jpg" alt="Look da OVNI Season — editorial com flash" fill loading="lazy" sizes="50vw" className="object-cover" />
+            <figcaption className="absolute bottom-3 left-3 font-mono text-[10px] tracking-widest bg-black/70 px-3 py-1.5">@byazvd / @komz___archivz · USO AUTORIZADO</figcaption>
+          </figure>
+        </div>
+      )}
       {items.length > 0 && (
         <div className="px-4 md:px-8 pb-16">
           <h2 className="font-display text-3xl md:text-5xl">PIECES FROM {c.name}</h2>

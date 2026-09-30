@@ -54,6 +54,7 @@ export default function Story({ params }: { params: { slug: string } }) {
       <div className="relative h-[50vh] md:h-[70vh] my-8">
         <Image src={e.image} alt={e.title} fill className="object-cover" sizes="100vw" />
       </div>
+      <p className="px-4 md:px-8 max-w-4xl -mt-4 mb-6 font-mono text-[10px] tracking-widest text-ash">© {e.credit}</p>
       <div className="px-4 md:px-8 max-w-2xl pb-16 space-y-5">
         {(BODY[e.slug] ?? []).map((p, i) => <p key={i} className="text-bone/80 leading-relaxed text-lg">{p}</p>)}
         <Link href="/editorial" className="inline-block font-mono text-xs tracking-widest text-ash hover:text-bone mt-4">← ALL STORIES</Link>
