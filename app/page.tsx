@@ -151,7 +151,7 @@ export default function Home() {
         <div className="grid md:grid-cols-4 gap-3 mt-10 auto-rows-[minmax(0,auto)]">
           {PRODUCTS.slice(0, 5).map((p, i) => <ProductCard key={p.slug} p={p} large={i === 0} />)}
         </div>
-        <p className="font-mono text-[10px] text-ink/50 mt-4">Preços reais da loja oficial onde confirmados; itens de passarela marcados como PLACEHOLDER até o drop.</p>
+        <p className="font-mono text-[10px] text-ink/50 mt-4">Fotos reais das peças (acervo Hylo, uso autorizado). Preços reais da loja oficial onde confirmados; itens de passarela marcados como PLACEHOLDER até o drop.</p>
       </section>
 
       {/* ARTISTS */}

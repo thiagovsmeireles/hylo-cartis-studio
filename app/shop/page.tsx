@@ -18,7 +18,7 @@ export default function Shop() {
       <div className="grid md:grid-cols-4 gap-3 mt-10">
         {PRODUCTS.map((p, i) => <ProductCard key={p.slug} p={p} large={i === 3} />)}
       </div>
-      <p className="font-mono text-[10px] text-ash mt-6 max-w-2xl leading-relaxed">Integração: a loja oficial roda em Nuvemshop (hylocartis.com.br). Este conceito mantém produto · tamanho · cor · estoque · carrinho e direciona o checkout para a infraestrutura real. Nada aqui finge processar pagamento.</p>
+      <p className="font-mono text-[10px] text-ash mt-6 max-w-2xl leading-relaxed">Fotos reais das peças: acervo Hylo Cartis Studio via loja oficial, usadas com autorização da marca. Itens de passarela sem foto oficial seguem marcados como PLACEHOLDER. Integração: a loja oficial roda em Nuvemshop (hylocartis.com.br). Este conceito mantém produto · tamanho · cor · estoque · carrinho e direciona o checkout para a infraestrutura real. Nada aqui finge processar pagamento.</p>
       <Link href="/" className="font-mono text-xs tracking-widest text-ash hover:text-bone mt-6 inline-block">← BACK TO UNIVERSE</Link>
     </div>
   );

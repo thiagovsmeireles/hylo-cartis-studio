@@ -33,6 +33,7 @@ export default function ProductView({ slug }: { slug: string }) {
         {p.status === 'preorder' && <p className="font-mono text-[10px] border border-bone/40 inline-block px-2 py-1 mt-3 tracking-widest">PRÉ-VENDA NA LOJA OFICIAL</p>}
         <p className="text-bone/70 mt-5 leading-relaxed">{p.detail}</p>
         <p className="font-mono text-[11px] text-ash mt-3">MATERIAL — {p.fabric}</p>
+        {p.credit && <p className="font-mono text-[10px] text-ash/70 mt-1">© {p.credit}</p>}
         <div className="mt-7">
           <div className="flex justify-between items-center gap-3 flex-wrap"><p className="font-mono text-[11px] tracking-widest">SIZE</p>
           <span className="inline-flex items-center gap-1 font-mono text-[11px] text-ash"><Ruler size={12} /> TABELA: P 70×52 · M 72×54 · G 74×56 · GG 76×58 CM</span></div>
