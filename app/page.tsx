@@ -89,13 +89,8 @@ export default function Home() {
 
       {/* ORIGEM */}
       <section className="bg-coal border-t border-white/10" aria-label="From Paranoá">
-        <div className="grid md:grid-cols-2">
-          <div className="relative min-h-[60vh]">
-            <Image src={`${BP}/hylo/brasilia-catedral-noite.jpg`} alt="Catedral de Brasília iluminada à noite" fill className="object-cover" loading="lazy" sizes="50vw" />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-coal/60" />
-            <span className="absolute bottom-4 left-4 font-mono text-[10px] tracking-widest bg-ink/70 px-3 py-2">BRASÍLIA À NOITE — FOTO: WIKIMEDIA COMMONS (CC)</span>
-          </div>
-          <div className="px-6 md:px-12 py-16 md:py-24">
+        <div className="px-4 md:px-8 py-16 md:py-24 max-w-4xl">
+          <div>
             <Reveal><p className="font-mono text-[10px] tracking-[0.3em] text-ash">01 / ORIGIN — FROM PARANOÁ</p></Reveal>
             <h2 className="font-display text-4xl md:text-6xl leading-[0.95] mt-4">NASCIDA NO<br />PARANOÁ.<br /><span className="text-ash">CRIADA PARA<br />IR ALÉM.</span></h2>
             <div className="mt-6 space-y-4 text-bone/75 leading-relaxed max-w-lg">
