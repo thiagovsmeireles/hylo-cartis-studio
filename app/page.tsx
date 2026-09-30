@@ -91,9 +91,9 @@ export default function Home() {
       <section className="bg-coal border-t border-white/10" aria-label="From Paranoá">
         <div className="grid md:grid-cols-2">
           <div className="relative min-h-[60vh]">
-            <Image src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1400&auto=format&fit=crop" alt="Rua e arquitetura urbana de concreto — textura da cidade que formou a Hylo" fill className="object-cover" loading="lazy" sizes="50vw" />
+            <Image src={`${BP}/hylo/brasilia-catedral-noite.jpg`} alt="Catedral de Brasília iluminada à noite" fill className="object-cover" loading="lazy" sizes="50vw" />
             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-coal/60" />
-            <span className="absolute bottom-4 left-4 font-mono text-[10px] tracking-widest bg-ink/70 px-3 py-2">PARANOÁ · BRASÍLIA · DF — FOTO ILUSTRATIVA</span>
+            <span className="absolute bottom-4 left-4 font-mono text-[10px] tracking-widest bg-ink/70 px-3 py-2">BRASÍLIA À NOITE — FOTO: WIKIMEDIA COMMONS (CC)</span>
           </div>
           <div className="px-6 md:px-12 py-16 md:py-24">
             <Reveal><p className="font-mono text-[10px] tracking-[0.3em] text-ash">01 / ORIGIN — FROM PARANOÁ</p></Reveal>
